@@ -16,8 +16,8 @@ namespace miapr_lab1
         public int ImagesCount { get; set; }
 
         public List<ImageClass> classes { get; private set; }
-        public List<miapr_lab1.Image> images { get; private set; }
-        public List<miapr_lab1.Image> centers { get; private set; }
+        public List<Image> images { get; private set; }
+        public List<Image> centers { get; private set; }
 
         private int width;
         private int height;
@@ -30,7 +30,7 @@ namespace miapr_lab1
             ImagesCount = 1000;
             random = new Random();
             classes = new List<ImageClass>();
-            images = new List<miapr_lab1.Image>();
+            images = new List<Image>();
             centers = new List<Image>();
         }
 

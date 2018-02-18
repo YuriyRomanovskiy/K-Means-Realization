@@ -9,14 +9,15 @@ namespace miapr_lab1
     class KAvarage
     {
         public List<ImageClass> classes { get; private set; }
-        public List<miapr_lab1.Image> images { get; private set; }
+        public List<Image> images { get; private set; }
         //private List<miapr_lab1.Image> centers;
-
         private List<List<Int32>> vectors;
 
         private bool isRecalculateNecessary = false;
+        private Int32 iterrationCount = 0;
+        private Int32 maxIterationCount = 5000;
 
-        public KAvarage(List<miapr_lab1.Image> centers, List<miapr_lab1.Image> images, List<ImageClass> classes)
+        public KAvarage(List<miapr_lab1.Image> centers, List<Image> images, List<ImageClass> classes)
         {
             vectors = new List<List<Int32>>();
             //this.centers = centers;
@@ -65,7 +66,7 @@ namespace miapr_lab1
         }
 
 
-        public void GetReadyClasses(bool isTrackingCenters = false)
+        public int GetReadyClasses(bool isTrackingCenters = false)
         {
             do
             {
@@ -74,7 +75,9 @@ namespace miapr_lab1
                 //AddPointCoClassImageList();
                 AddPointCoClassImageList();
                 ChangeClassCenters(isTrackingCenters);
-            } while (isRecalculateNecessary);
+                iterrationCount++;
+            } while (isRecalculateNecessary && iterrationCount< maxIterationCount);
+            return iterrationCount;
         }
 
         public void ChangeClassCenters(bool isTrackingCenters = false)

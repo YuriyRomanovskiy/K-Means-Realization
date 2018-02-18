@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\IImage.cs" />
     <Compile Include="Data\Image.cs" />
     <Compile Include="Data\ImageClass.cs" />
     <Compile Include="Components\DrawPanelEx.cs">

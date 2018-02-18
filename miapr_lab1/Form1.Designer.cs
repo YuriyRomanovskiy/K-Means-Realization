@@ -52,10 +52,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1, 453);
+            this.label1.Location = new System.Drawing.Point(12, 450);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.Size = new System.Drawing.Size(66, 17);
             this.label1.TabIndex = 2;
+            this.label1.Text = "iterations";
             // 
             // drawPanelEx1
             // 

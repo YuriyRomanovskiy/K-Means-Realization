@@ -12,7 +12,7 @@ namespace miapr_lab1
     {
         public static void Raise<TEventArgs>(this TEventArgs e, Object sender, ref EventHandler<TEventArgs> eventDelegate)
         {
-            //безопасно в отношении к потокам
+            // безопасно в отношении к потокам
             EventHandler<TEventArgs> temp = Volatile.Read(ref eventDelegate);
             if (temp != null)
             {

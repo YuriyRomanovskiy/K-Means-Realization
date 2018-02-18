@@ -65,8 +65,8 @@ namespace miapr_lab1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            drawPanelEx1.Refresh();
-            kAvarage.GetReadyClasses(checkBox1.Checked);
+            //drawPanelEx1.Refresh();
+            label1.Text = kAvarage.GetReadyClasses(checkBox1.Checked).ToString();
             manager.SimulateDraw(drawPanelEx1.CreateGraphics(), drawPanelEx1.ClientRectangle, kAvarage.classes);
         }
     }

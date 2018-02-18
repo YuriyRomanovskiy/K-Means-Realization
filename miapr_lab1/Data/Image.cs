@@ -7,12 +7,13 @@ using System.Drawing;
 
 namespace miapr_lab1
 {
-    class Image
+    class Image: IImage
     {
 
         public int X { get; private set; }
         public int Y { get; private set; }
         public int Side { get; private set; }
+
         public ImageClass ImgClass { get; set; }
         public bool IsCenter { get; private set; }
 

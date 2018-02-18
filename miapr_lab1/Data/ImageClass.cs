@@ -13,8 +13,8 @@ namespace miapr_lab1
         public int Identificator { get; private set; }
         public Pen PaintComponent { get; private set; }
         public Pen CenterPaintComponent { get; private set; }
-        public miapr_lab1.Image Center { get; set; }
-        public List<miapr_lab1.Image> Images { get; set; }
+        public Image Center { get; set; }
+        public List<Image> Images { get; set; }
 
         public ImageClass(int r, int g, int b)
         {
