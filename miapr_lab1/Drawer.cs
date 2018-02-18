@@ -14,7 +14,7 @@ namespace miapr_lab1
 
         public static void DrawList(List<Image> images, Graphics g)
         {
-            
+         //   
             foreach (Image item in images)
             {
                 if (item.ImgClass != null)
