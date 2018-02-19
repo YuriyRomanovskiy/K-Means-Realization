@@ -45,23 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\IImage.cs" />
-    <Compile Include="Data\Image.cs" />
-    <Compile Include="Data\ImageClass.cs" />
+    <Compile Include="Model\Image\IImage.cs" />
+    <Compile Include="Model\ImageClass\IImageClass.cs" />
+    <Compile Include="Model\Image\Image.cs" />
+    <Compile Include="Model\ImageClass\ImageClass.cs" />
     <Compile Include="Components\DrawPanelEx.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Drawer.cs" />
-    <Compile Include="ExDrawEventArgs.cs" />
+    <Compile Include="Drawer\Drawer.cs" />
+    <Compile Include="EventsProcessing\ExDrawEventArgs.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Generator.cs" />
+    <Compile Include="KAvarageProcessing\Generator.cs" />
     <Compile Include="InputCheck.cs" />
-    <Compile Include="KAvarage.cs" />
+    <Compile Include="KAvarageProcessing\KAvarage.cs" />
     <Compile Include="EventsProcessing\Manager.cs" />
     <Compile Include="EventsProcessing\PaintEventArgsExtentions.cs" />
     <Compile Include="Program.cs" />

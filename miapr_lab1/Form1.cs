@@ -31,7 +31,7 @@ namespace miapr_lab1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            button2.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,17 +44,20 @@ namespace miapr_lab1
                 return;
             }
 
+            button2.Enabled = false;
+
             generator = new Generator(drawPanelEx1.Width, drawPanelEx1.Height);
             generator.ImagesCount = imagesCount;
             generator.ClassCount = classCount;
-            
             generator.PrepareAll();
-
             kAvarage = new KAvarage(generator.centers, generator.images, generator.classes);
             kAvarage.CalculateDistance();
             kAvarage.DevideByClasses();
             kAvarage.FullGroups();
+
             manager.SimulateDraw(drawPanelEx1.CreateGraphics(), drawPanelEx1.ClientRectangle, kAvarage.classes);
+            if (drawPanelEx1.IsPainted)
+                button2.Enabled = true;
             label1.Text = kAvarage.classes[0].Center.X.ToString() + "-" + kAvarage.classes[0].Center.Y.ToString()+" ";
         }
 

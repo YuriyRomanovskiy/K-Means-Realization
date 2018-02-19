@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace miapr_lab1
 {
 
-    class ImageClass
+    class ImageClass: IImageClass
     {
         public int Identificator { get; private set; }
         public Pen PaintComponent { get; private set; }
